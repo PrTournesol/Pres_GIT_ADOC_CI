@@ -223,15 +223,15 @@ On vérifie le statut du git :
 [source]
 ----------------------------------------------------------------------
 $ git st
-#On branch master
-#Your branch is up-to-date with 'origin/master'.
-#Changes not staged for commit:
-#  (use "git add <file>..." to update what will be committed)
-#  (use "git checkout -- <file>..." to discard changes in working directory)
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
 
-#        modified:   pres.adoc
+        modified:   pres.adoc
 
-# no changes added to commit (use "git add" and/or "git commit -a")
+ no changes added to commit (use "git add" and/or "git commit -a")
 ----------------------------------------------------------------------
 
 // ------
@@ -260,28 +260,27 @@ $ git add pres.adoc
 
 // ------
 [{topic}]
-== Etape 2 (suite) : vérification
+== Etape 3 (suite) : vérification
 
 On peut visualiser les actions en vérifiant l'*état courant* du dépôt :
 
 [source]
 ----------------------------------------------------------------------
 $ git status
-# On branch master
-# Your branch is ahead of 'origin/master' by 1 commit.
-#
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   Generalites.txt
-#	deleted:    S3/128056_56.d
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   git.adoc
+
+
 ...
 ----------------------------------------------------------------------
 
 // ------
 [{topic}]
-== Etape 3 : Commit
+== Etape 4 : Commit
 
 Pour entériner les changements :
 
