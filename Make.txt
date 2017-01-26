@@ -1,0 +1,1 @@
+asciidoctor -b html5 -a data-uri -a icons=font -a images=images -a source-highlighter=pygments -T ./asciidoctor-deck.js/templates/haml/ -a slides -a deckjs_theme=swiss git.adoc
