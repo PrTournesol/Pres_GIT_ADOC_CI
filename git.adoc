@@ -1,10 +1,10 @@
 //---------------------------------
 // Cours sur Git
-// (c) JMB - 2014
+// (c) Maël Soulié - 2016 inspiré par le cours de JMB - 2014
 //---------------------------------
 [[git]]
 = Gestion de version avec *git*
-J.-M. Bruel <jbruel@gmail.com>
+Inpiré du cours de J.-M. Bruel <jbruel@gmail.com>
 v2.0 {localdate}
 :imagesdir: images
 //------------------------------------ variables de configuration
@@ -79,27 +79,9 @@ ifdef::slides[]
 == Pour suivre en live... icon:mobile[] icon:tablet[] icon:laptop[]
 
 [{statement}]
-{bitlysiteurl}
+{bit.ly/ms-git}
 
 {siteurl}
-
-/////
-//image::qrcode.png[role="middle stretch-y"]
-[qrcode, target='presentation-qrcode.png', size=20, alt='{slidesurl}', role='middle stretch-y']
-----
-{siteurl}
-----
-
-[geb]
-....
-go "http://google.com"
-$("input", name: "q").value("asciidoctor")
-Tread.sleep(5000)
-....
-
-.Google Landing page
-screenshot::http://google.com[google]
-/////
 
 endif::slides[]
 
@@ -160,9 +142,10 @@ On initialise certaine variables (une fois pour toute en général) :
 
 [source]
 ----------------------------------------------------------------------
-$ git config --global user.name "JM Bruel"
-$ git config --global user.email jbruel@gmail.com
-$ git config --global alias.co checkout
+$ git config --global user.name "Maël Soulié"
+$ git config --global user.email mael-soulie@hotmail.fr
+$ git config --global alias.co checkou
+$ git config --global alias.st status
 ----------------------------------------------------------------------
 
 // ------
@@ -177,8 +160,8 @@ Voici un extrait link:util/.gitconfig[du mien] :
 [source]
 ----------------------------------------------------------------------
 [user]
-        name = Jean-Michel Bruel
-        email = jbruel@gmail.com
+	name = Maël Soulié
+	email = mael-soulie@hotmail.fr
 [alias]
         co = checkout
         st = status
@@ -232,16 +215,35 @@ drwxr-xr-x  10 bruel  admin   340 21 jul 17:29 .git/
 ----------------------------------------------------------------------
 
 ====
+// ------
+[{topic}]
+== Etape 2 : Vérification du statut du dossier git
+
+On vérifie le statut du git :
+[source]
+----------------------------------------------------------------------
+$ git st
+#On branch master
+#Your branch is up-to-date with 'origin/master'.
+#Changes not staged for commit:
+#  (use "git add <file>..." to update what will be committed)
+#  (use "git checkout -- <file>..." to discard changes in working directory)
+
+#        modified:   pres.adoc
+
+# no changes added to commit (use "git add" and/or "git commit -a")
+----------------------------------------------------------------------
 
 // ------
 [{topic}]
-== Etape 2 : ajout des fichiers
+== Etape 3 : ajout des fichiers à l'index
 
-On ajoute les fichiers courants au dépôt :
+
+On ajoute les fichiers courants à l'index git :
 
 [source]
 ----------------------------------------------------------------------
-$ git add .
+$ git add pres.adoc
 ----------------------------------------------------------------------
 
 [NOTE]
