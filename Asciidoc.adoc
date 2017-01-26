@@ -3,6 +3,11 @@
 // (c) Maël Soulié - 2016
 //---------------------------------
 = Format Asciidoc
+Maël Soulié
+:backend: deckjs
+:deckjs_transition: fade
+:navigation:
+
 
 == Introduction
 
